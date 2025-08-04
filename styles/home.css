@@ -3,8 +3,10 @@
     display: flex;
     justify-content: center;
     font-family: HiroMisake;
+    font-size: 12pt;
+    font-weight: normal;
+    font-style: normal;
     
-    font-weight:0;
 }
 
 nav ul {
@@ -18,12 +20,9 @@ nav ul {
     gap: 60px;
 }
 
-
-
 nav a {
     text-decoration: none;
-    color: #ffffff;
-    font-weight: bold;
+    color: #CC2727;
     padding: 30px;
     
 }
@@ -32,23 +31,39 @@ nav a {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 15px;
+    padding: 20px;
     border-radius: 50%;
     background-color: #253054;
+    
     
 }
 
 .logo {
     width: 80px; 
     height: 80px;
+    
+}
 
+.main-header h1 {
+    font-family: HiroMisake;
+    font-size: 48pt;
+    color: #253054;
+    font-style: normal;
+    font-weight: normal;
+}
+
+p {
+    font-family: HiroMisake;
+    font-size: 12pt;
+    color: #CC2727;
 }
 
 
 
 @font-face {
     font-family: 'HiroMisake';
-    font-size: xx-small;
-    font-weight: lighter;
-    src: url(/fonts/HIROMISAKE.ttf) format('truetype');
+    src: url(/fonts/HIROMISAKE.ttf);
+    font-weight: normal;
+    font-style: normal;
+    
 }
