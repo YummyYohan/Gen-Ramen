@@ -7,21 +7,35 @@
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
 </head>
 <body>
+    <script src="/scripts/script.js"></script>
     
     <div class = "main-nav">
         <nav>
             <ul>
-                <li><a href="/home.html">Home</a></li>
-                <li><a href="/menu">Menu</a></li>
+                <li><a href="/pages/home.html">Home</a></li>
+                <li><a href="/pages/menu.html">Menu</a></li>
                 <li></li>
 
                 <div class="logo-container">
+                    <svg width="100" height="100" viewbox="0 0 100 100">
+                        <defs>
+                            <path
+                                id="topTextPath"
+                                d="M50,50 m-40,0 a40,40 0 1,1 80, 0"
+                                fill="none"
+                            />
+                        </defs>
+                        <text>
+                            <textPath href="#topTextPath" startOffset="50%">
+                                Gen Ramen
+                            </textPath>
+                        </text>
+                    </svg>
                     <img src="/images/logo.svg" alt="Gen Ramen Logo" class="logo" />
-                    <p>Gen Ramen</p>
                 </div>
 
-                <li><a href="/contact">Contact</a></li>
-                <li><a href="/map">Map</a></li>
+                <li><a href="/pages/contact.html">Contact</a></li>
+                <li><a href="/pages/map.html">Map</a></li>
             </ul>
         </nav>
     </div>
