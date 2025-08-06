@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     font-family: HiroMisake;
-    font-size: 12pt;
+    font-size: 17px;
     font-weight: normal;
     font-style: normal;   
 }
@@ -38,7 +38,7 @@ nav a.active {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 12px;
     border-radius: 50%;
     background-color: #253054;
 }
@@ -47,29 +47,79 @@ nav a.active {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 80px; 
-    height: 80px;
+    width: 70px; 
+    height: 70px;
     transform: translate(-50%, -50%);
     border-radius: 50%;
 }
 
-.main-header h1 {
-    font-family: HiroMisake;
-    font-size: 48pt;
+.topPage {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 50px auto;
+    padding: 20px;
+}
+.main-header {
+    text-align: left;
+    width: 100%;
+    margin: 0 20px;
     color: #253054;
-    font-style: normal;
-    font-weight: normal;
+    max-width: 33.5%;
+    overflow-wrap: break-word;
 }
 
-.logo-container p {
+
+.main-header h1 {
     font-family: HiroMisake;
-    font-size: 12pt;
-    color: #CC2727; 
+    font-size: 48px;
+    font-style: normal;
+    font-weight: normal;
+    
 }
+
+.main-header h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 23px;
+
+}
+
+.icon-header {
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.ramen-icon {
+    width: 100%;
+    max-width: 400px;
+    height:auto;
+    max-height: 420px;
+}
+
+circle {
+    fill: #253054;
+}
+
+span {
+    color: #CC2727;
+}
+
 
 text {
     text-anchor: middle;
     fill: #CC2727;
+    font-size: 14px;
 }
 
 @font-face {
@@ -77,5 +127,29 @@ text {
     src: url(/fonts/HIROMISAKE.ttf);
     font-weight: normal;
     font-style: normal;
-    
+}
+
+
+/* Responsive fix for small screens */
+@media (max-width: 1000px) {
+  .topPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .main-header,
+  .icon-header,
+  .ramen-icon {
+    max-width: 100%;
+    position: static;
+    transform: none;
+  }
+
+  .main-header h1,
+  .main-header h2 {
+    text-align: center;
+  }
 }
