@@ -1,3 +1,7 @@
+body {
+    background-color: #FFF7F1;
+}
+
 .main-nav {
     padding: 20px;
     display: flex;
@@ -58,13 +62,14 @@ nav a.active {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     gap: 20px;
     margin: 50px auto;
     padding: 20px;
 }
 .main-header {
+    align-items: flex-start;
     text-align: left;
     width: 100%;
     margin: 0 20px;
@@ -80,6 +85,7 @@ nav a.active {
     font-style: normal;
     font-weight: normal;
     
+    
 }
 
 .main-header h2 {
@@ -91,13 +97,51 @@ nav a.active {
 }
 
 .icon-header {
+    
     align-items: center;
     justify-content: center;
-    margin: 0 auto;
+    margin: 2% auto;
     text-align: center;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.icon-header .jap1 {
+    position: absolute;
+    top: -45%;
+    right: 50%;
+    font-size: 128px;
+    font-style: normal;
+    font-weight: 500;
+    color: #CC2727;
+}
+
+.icon-header .jap2 {
+    position: absolute;
+    top: -2%;
+    right: 9%;
+    font-size: 128px;
+    font-style: normal;
+    font-weight:500;
+    color: #CC2727;
+}
+
+.icon-header h2 {
+    font-family: HiroMisake;
+    font-size: 24px;    
+    padding: 10% 0 0 0;
+    font-weight: normal;
+    font-style: normal;
+    color: #CC2727;
+}
+
+.icon-header h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+    color: #253054;
 }
 
 .ramen-icon {
