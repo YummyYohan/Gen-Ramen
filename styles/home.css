@@ -151,8 +151,14 @@ nav a.active {
     max-height: 420px;
 }
 
-circle {
+.icon-header circle {
     fill: #253054;
+}
+
+.icon-header line {
+    stroke: #253054;
+    stroke-width: 7;
+    
 }
 
 span {
