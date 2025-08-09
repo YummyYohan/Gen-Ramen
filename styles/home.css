@@ -14,7 +14,7 @@ html, body {
     font-style: normal;   
 }
 
-nav ul {
+.main-nav nav ul {
     list-style-type: none;
     display: flex;
     align-items: center;
@@ -26,13 +26,13 @@ nav ul {
     
 }
 
-nav a {
+.main-nav nav a {
     text-decoration: none;
     color: #CC2727;
     padding: 30px;
 }
 
-nav a.active {
+.main-nav nav a.active {
     text-decoration: underline;
     color: #CC2727;
     padding: 30px;
@@ -77,7 +77,7 @@ nav a.active {
     width: 100%;
     margin: 0 20px;
     color: #253054;
-    max-width: 32.5%;
+    max-width: 33%;
     overflow-wrap: break-word;
 }
 
@@ -190,6 +190,99 @@ text {
     fill: #CC2727;
     font-size: 14px;
 }
+
+/* second page of home */
+.menu-category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+    padding: 20px;
+}
+
+.menu-category nav ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #253054;
+    padding: 20px 50px;
+    border-radius: 200px;
+    gap: 60px;
+    color: #CC2727;
+    font-family: "HiroMisake";
+    font-size: 17px;
+}
+
+.menu-carousel {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-left: 3em;
+    margin-right: 3em;
+
+}
+.menu-item{
+    position: relative;
+    background-color: #253054;
+    border-radius: 20px;
+    width: 230px;
+    height: 265px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.menu-item .t-ramen {
+    margin-top: -45px;
+}
+
+.menu-item h1{
+    position: absolute;
+    text-align: center;
+    font-family: "HiroMisake";
+    font-size: 32px;
+    color:#FFFFFF;
+    font-weight: normal;
+    font-style: normal;
+    background-color: #CC2727;
+    width: 310px;
+    height: 57px;
+    line-height: 62px;
+    margin: 0px;
+    bottom: 0;
+    z-index: 1;
+}
+
+.menu-item svg{
+    position: absolute;
+    top: calc(100% - 50px);
+    left: 50%;
+    transform: translateX(-50%);
+    flex-shrink: 0;
+    width: 340px;
+    height: 45px;
+    z-index: 0;
+    fill:#253054;
+}
+
+.menu-preview p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    height: 41px;
+    font-family: "HiroMisake";
+    font-size: 32px;
+    color:#FFFFFF;
+    background-color: #253054;
+    border-radius: 20px;
+    margin: 120px auto;
+}
+
 
 @font-face {
     font-family: 'HiroMisake';
