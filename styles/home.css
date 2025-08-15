@@ -5,7 +5,7 @@ html, body {
 }
 
 .main-nav {
-    padding: 20px;
+    padding: 40px 0 0 0;
     display: flex;
     justify-content: center;
     font-family: HiroMisake;
@@ -215,29 +215,62 @@ text {
     font-size: 17px;
 }
 
-.menu-carousel {
-    margin-top: 80px;
+.menu-carousel-container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-left: 3em;
-    margin-right: 3em;
-
+    justify-content: center;
+    width: 100%;
+    max-width: 960px; /* width for 3 × ~320px cards */
+    margin: 50px auto;
+    padding: 60px;
+    overflow: auto; /* only show 3 cards */
+    position: relative;
+    flex-direction: column;
+    scrollbar-width: 0;
+    -ms-overflow-style: none;
 }
-.menu-item{
+
+.menu-carousel-container::-webkit-scrollbar{
+    display: none;
+}
+
+.menu-carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 220px; /* exactly 3 items visible */
+    gap: 150px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* smooth iOS scroll */
+    padding-bottom: 20px;
+    overflow: visible;
+}
+
+.menu-item {
+    scroll-snap-align: center; /* snap each card to center of viewport */
     position: relative;
     background-color: #253054;
     border-radius: 20px;
-    width: 230px;
     height: 265px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-end;
+    overflow: visible; /* allow image to stick out */
     
 }
 
-.menu-item .t-ramen {
-    margin-top: -45px;
+
+/* Hide scrollbar for all browsers */
+.menu-carousel::-webkit-scrollbar { display: none; }
+.menu-carousel { -ms-overflow-style: none; scrollbar-width: none; }
+
+
+.menu-item img.t-ramen {
+    width: 300px; /* adjust size */
+    height: auto;
+    position: absolute;
+    top: -40px; /* image floats above the card */
+    z-index: 2;
+    overflow: visible;
 }
 
 .menu-item h1{
@@ -257,6 +290,40 @@ text {
     z-index: 1;
 }
 
+.menu-item h1.vegan-ramen {
+    position: absolute;
+    text-align: center;
+    font-family: "HiroMisake";
+    font-size: 28px;
+    color:#FFFFFF;
+    font-weight: normal;
+    font-style: normal;
+    background-color: #CC2727;
+    width: 310px;
+    height: 57px;
+    line-height: 30px;
+    margin: 0px;
+    bottom: 0;
+    z-index: 1;
+}
+
+.menu-item h1.chicken-ramen {
+    position: absolute;
+    text-align: center;
+    font-family: "HiroMisake";
+    font-size: 28px;
+    color:#FFFFFF;
+    font-weight: normal;
+    font-style: normal;
+    background-color: #CC2727;
+    width: 310px;
+    height: 57px;
+    line-height: 30px;
+    margin: 0px;
+    bottom: 0;
+    z-index: 1;
+}
+
 .menu-item svg{
     position: absolute;
     top: calc(100% - 50px);
@@ -267,12 +334,14 @@ text {
     height: 45px;
     z-index: 0;
     fill:#253054;
+    overflow: visible;
 }
 
 .menu-preview p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 200px;
     height: 41px;
     font-family: "HiroMisake";
@@ -314,4 +383,6 @@ text {
   .main-header h2 {
     text-align: center;
   }
+  
+  
 }
