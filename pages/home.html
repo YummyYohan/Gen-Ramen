@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8" />
     <title>Gen Ramen</title>
@@ -9,13 +10,14 @@
     <!-- Google Fonts: Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-    <script src="/scripts/script.js"></script>
-   
-    
-    <div class = "main-nav">
+
+
+    <div class="main-nav">
         <nav>
             <ul>
                 <li><a href="/pages/home.html">Home</a></li>
@@ -25,11 +27,7 @@
                 <div class="logo-container">
                     <svg width="100" height="100" viewbox="0 0 100 100">
                         <defs>
-                            <path
-                                id="topTextPath"
-                                d="M50,50 m-40,0 a40,40 0 1,1 80, 0"
-                                fill="none"
-                            />
+                            <path id="topTextPath" d="M50,50 m-40,0 a40,40 0 1,1 80, 0" fill="none" />
                         </defs>
                         <text>
                             <textPath href="#topTextPath" startOffset="50%">
@@ -46,113 +44,166 @@
         </nav>
     </div>
 
-    <div class = "topPage">
-        <div class = "main-header">
+    <div class="topPage">
+        <div class="main-header">
             <h1>Home For <span class="highlight">Authentic Japanese</span> Comfort</h1>
-            <h2>Warm your soul with rich, handcrafted broths, fresh noodles, and bold flavors. Gen Ramen blends tradition and innovation in every bowl.</h3>
+            <h2>Warm your soul with rich, handcrafted broths, fresh noodles, and bold flavors. Gen Ramen blends
+                tradition and innovation in every bowl.</h3>
         </div>
 
-        <div class = "icon-header">
+        <div class="icon-header">
             <svg width="200" height="200" viewbox="0 0 200 200">
-                <circle cx="100" cy="100" r="100"/>
+                <circle cx="100" cy="100" r="100" />
             </svg>
             <!-- translates to ramen -->
             <h1 lang="ja" class="jap1">拉</h1>
             <h1 lang="ja" class="jap2">麺</h1>
             <h2>
                 <svg width="70" height="10" viewbox="0 0 70 10">
-                    <line x1="0" y1="1" x2="70" y2="1"/>
+                    <line x1="0" y1="1" x2="70" y2="1" />
                 </svg>
                 Japanese Food Restaurant
                 <svg width="70" height="10" viewbox="0 0 70 10">
-                    <line x1="0" y1="1" x2="70" y2="1"/>
+                    <line x1="0" y1="1" x2="70" y2="1" />
                 </svg>
             </h2>
-            
+
             <h3>Raleigh, NC</h3>
         </div>
 
-        <div class = "ramen-icon">
+        <div class="ramen-icon">
             <svg width="438" height="480" viewbox="0 0 438 480">
-                <circle cx="330" cy="240" r="230" fill="#CC2727"/>
-                <circle cx="350" cy="240" r="207" fill="#F25757"/>
-                <circle cx="400" cy="240" r="177" fill="#F37070"/>
+                <circle cx="330" cy="240" r="230" fill="#CC2727" />
+                <circle cx="350" cy="240" r="207" fill="#F25757" />
+                <circle cx="400" cy="240" r="177" fill="#F37070" />
             </svg>
             <img src="/images/Ramen blue.svg" alt="Ramen Icon" class="ramen-icon" width="412" height="437" />
 
-        </div>         
+        </div>
     </div>
-    
+
     <div class="menu-preview">
         <div class="menu-category">
             <nav>
                 <ul>
-                    <li>Ramen</li>
-                    <li>Bao Bun</li>
-                    <li>Donburi</li>
-                    <li>Izakaya</li>
+                    <div class="blue-bubble" id="blueBubble"></div>
+                    <div class="white-bubble" id="whiteBubble"></div>
+                    <li data-index="0" class="active">Ramen</li>
+                    <li data-index="1">Bao Bun</li>
+                    <li data-index="2">Donburi</li>
+                    <li data-index="3">Izakaya</li>
                 </ul>
             </nav>
         </div>
 
-        <div class="menu-carousel-container">
-            <div class="menu-carousel">
-                    <div class="menu-item">
-                        <img src="/images/Tonkotsu Ramen.png" alt="Tonkotsu Ramen" class="t-ramen"width="300" height="240"/>
+        <div class="menu-carousel-body">
+
+            <div class="menu-carousel-container">
+
+                <div class="menu-carousel" id="carousel">
+                    <!-- Ramen -->
+                    <div class="menu-item" data-category="ramen">
+                        <img src="/images/Tonkotsu Ramen.png" alt="Tonkotsu Ramen" class="t-ramen" width="250"
+                            height="150" />
                         <h1>Tonkotsu Ramen</h1>
                         <svg viewBox="0 0 360 45">
                             <rect width="360" height="45" />
                         </svg>
                     </div>
-                    <div class="menu-item">
-                        <img src="/images/Tonkotsu Ramen.png" alt="Tonkotsu Ramen" class="t-ramen"width="300" height="240"/>
+                    <div class="menu-item" data-category="ramen">
+                        <img src="/images/temp-img.webp" alt="Vegan Ramen" class="t-ramen" width="250" height="150" />
                         <h1 class="vegan-ramen">Lemongrass Vegan Ramen</h1>
                         <svg viewBox="0 0 360 45">
                             <rect width="360" height="45" />
                         </svg>
                     </div>
-                    <div class="menu-item">
-                        <img src="/images/Tonkotsu Ramen.png" alt="Tonkotsu Ramen" class="t-ramen"width="300" height="240"/>
+                    <div class="menu-item" data-category="ramen">
+                        <img src="/images/temp-img.webp" alt="Beef Ramen" class="t-ramen" width="250" height="150" />
+                        <h1 class="beef-ramen">Spicy Lime Beef Ramen</h1>
+                        <svg viewBox="0 0 360 45">
+                            <rect width="360" height="45" />
+                        </svg>
+                    </div>
+                    <div class="menu-item" data-category="ramen">
+                        <img src="/images/Chicken Ramen.png" alt="Chicken Ramen" class="t-ramen" width="250"
+                            height="140" />
                         <h1 class="chicken-ramen">Creamy Chicken Ramen</h1>
                         <svg viewBox="0 0 360 45">
                             <rect width="360" height="45" />
                         </svg>
                     </div>
-                    <div class="menu-item">
-                        <img src="/images/Tonkotsu Ramen.png" alt="Tonkotsu Ramen" class="t-ramen"width="300" height="240"/>
-                        <h1>Tonkotsu Ramen</h1>
+                    <div class="menu-item" data-category="ramen">
+                        <img src="/images/Miso Ramen.png" alt="Miso Ramen" class="t-ramen" width="250" height="70" />
+                        <h1>Spicy Miso Ramen</h1>
                         <svg viewBox="0 0 360 45">
                             <rect width="360" height="45" />
                         </svg>
                     </div>
-                    <div class="menu-item">
-                        <img src="/images/Tonkotsu Ramen.png" alt="Tonkotsu Ramen" class="t-ramen"width="300" height="240"/>
-                        <h1>Tonkotsu Ramen</h1>
+                    <div class="menu-item" data-category="ramen">
+                        <img src="/images/Curry Ramen.png" alt="Curry Ramen" class="t-ramen" width="260" height="110" />
+                        <h1>Chicken Curry Ramen</h1>
                         <svg viewBox="0 0 360 45">
                             <rect width="360" height="45" />
                         </svg>
                     </div>
-                    <div class="menu-item">
-                        <img src="/images/Tonkotsu Ramen.png" alt="Tonkotsu Ramen" class="t-ramen"width="300" height="240"/>
-                        <h1>Tonkotsu Ramen</h1>
+                    <div class="menu-item" data-category="ramen">
+                        <img src="/images/Shoyu Ramen.png" alt="Shoyu Ramen" class="t-ramen" width="260" height="140" />
+
+                        <h1>[NEW] <br /> Shoyu Ramen</h1>
+                        <svg viewBox="0 0 360 45">
+                            <rect width="360" height="45" />
+                        </svg>
+                    </div>
+
+                    <!-- Bao Buns -->
+                    <div class="menu-item" data-category="baobun">
+                        <img src="/images/Pork Bao.png" alt="Bao Bun" class="pork-bao" width="700" height="1250" />
+                        <h1>Pork <br /> Bao Bun</h1>
+                        <svg viewBox="0 0 360 45">
+                            <rect width="360" height="45" />
+                        </svg>
+                    </div>
+                    <div class="menu-item" data-category="baobun">
+                        <img src="/images/Crab Bao.png" alt="Bao Bun" class="crab-bao" width="350" height="700" />
+                        <h1>Crab <br /> Bao Bun</h1>
+                        <svg viewBox="0 0 360 45">
+                            <rect width="360" height="45" />
+                        </svg>
+                    </div>
+
+                    <!-- Donburi -->
+                    <div class="menu-item" data-category="donburi">
+                        <img src="/images/temp-img.webp" alt="Donburi" width="300" height="240" />
+                        <h1>Pork Donburi</h1>
+                        <svg viewBox="0 0 360 45">
+                            <rect width="360" height="45" />
+                        </svg>
+                    </div>
+
+                    <!-- Izakaya -->
+                    <div class="menu-item" data-category="izakaya">
+                        <img src="/images/temp-img.webp" alt="Izakaya" width="300" height="240" />
+                        <h1>Chicken Izakaya</h1>
                         <svg viewBox="0 0 360 45">
                             <rect width="360" height="45" />
                         </svg>
                     </div>
                 </div>
-        
-                
-            
+
+            </div>
+            <button class="carousel-btn prev">&#10094;</button>
+            <button class="carousel-btn next">&#10095;</button>
         </div>
-        <p>See More</p>
+        <button onclick="redirectToPage()" class="see-more-btn">See Full</button>
 
     </div>
-    
+
     <footer>
         <p>&copy; 2025 Gen Ramen. All rights reserved.</p>
     </footer>
 
+    <script src="/scripts/script.js"></script>
 
 </body>
-</html>
 
+</html>
