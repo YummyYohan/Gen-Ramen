@@ -219,9 +219,14 @@ text {
     position: relative;
 }
 
-.menu-category nav li{
+.menu-category nav li {
     cursor: pointer;
     z-index: 2;
+    transition: transform 0.2s ease-in-out;
+}
+
+.menu-category nav li:hover {
+    transform: scale(1.2);
 }
 
 .menu-category nav li.active {
@@ -231,13 +236,13 @@ text {
 /* Sliding blue bubble */
 .menu-category nav ul .blue-bubble {
     position: absolute;
-    width: 92px; 
+    width: 92px;
     height: 80px;
-    left: 0px; /* starts at the left */
-    background-color: #253054; 
+    left: 0px;
+    background-color: #253054;
     border-radius: 50%;
     transition: left 0.3s ease;
-    z-index: 1; /* behind everything */
+    z-index: 1;
     top: 50%;
     transform: translate(-50%, -50%);
 
@@ -248,11 +253,11 @@ text {
     position: absolute;
     width: 70px;
     height: 60px;
-    left: 0px; /* starts at the left */
+    left: 0px;
     background-color: #ffffff;
     border-radius: 50%;
     transition: left 0.3s ease;
-    z-index: 1; /* now in front of blue bubble but behind text */
+    z-index: 1;
     top: 50%;
     transform: translate(-50%, -50%);
 }
@@ -268,7 +273,8 @@ text {
     background-color: #FFF7F1;
     height: 100vh;
     justify-content: center;
-    
+
+
 }
 
 .menu-carousel-container {
@@ -276,7 +282,7 @@ text {
     max-width: 800px;
     overflow: hidden;
     position: relative;
-    padding: 100px 0;
+    padding: 100px 0 50px 0;
 }
 
 
@@ -284,13 +290,16 @@ text {
     display: flex;
     gap: 60px;
     cursor: grab;
-    transition: transform 0.5s ease; /* smooth movement */
-    scroll-behavior: smooth; /* smooth scroll when using JS */
+    transition: transform 0.5s ease;
+    /* smooth movement */
+    scroll-behavior: smooth;
+    /* smooth scroll when using JS */
     user-select: none;
 }
 
 .menu-carousel::-webkit-scrollbar {
-    display: none; /* hide scrollbar */
+    display: none;
+    /* hide scrollbar */
 }
 
 .menu-item {
@@ -310,7 +319,7 @@ text {
 
 .menu-item img.t-ramen {
     position: absolute;
-    top: -40px; 
+    top: -40px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
@@ -320,21 +329,31 @@ text {
 
 .menu-item img.pork-bao {
     position: absolute;
-    top: -420px; 
+    top: -420px;
     left: 46%;
     transform: translateX(-50%);
     z-index: 2;
-    
+
     overflow: visible;
 }
 
 .menu-item img.crab-bao {
     position: absolute;
-    top: -250px; 
-    left: 46%;
+    top: -250px;
+    left: 50%;
     transform: translateX(-50%);
     z-index: 2;
-    
+
+    overflow: visible;
+}
+
+.menu-item img.temp {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+
     overflow: visible;
 }
 
@@ -356,7 +375,8 @@ text {
 
 .menu-item h1 {
     position: absolute;
-    bottom: 10px;         /* stays at card bottom */
+    bottom: 10px;
+    /* stays at card bottom */
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
@@ -369,9 +389,9 @@ text {
     font-style: normal;
 }
 
-.menu-item svg{
+.menu-item svg {
     position: absolute;
-    bottom: 20px;        
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     width: 360px;
@@ -394,25 +414,35 @@ button.see-more-btn {
     color: #FFFFFF;
     background-color: #253054;
     border-radius: 20px;
-    margin: 10px auto;
+    margin: 0px auto;
+    transition: all 0.3s ease;
 }
 
 button.see-more-btn:hover {
     cursor: pointer;
     background-color: #CC2727;
+    transform: scale(1.1);
+    box-shadow: 0 0 40px rgba(204, 39, 39, 0.6);
+
 }
 
 
 button.carousel-btn {
     position: absolute;
-    background: #253054a5;
+    background: #25305400;
     border: none;
-    color: #cc2727bd;
+    color: #cc2727;
     font-size: 1.5rem;
     cursor: pointer;
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    transition: 0.3s ease;
+}
+
+button.carousel-btn:hover {
+    background: #253054;
+    color: #ffffff;
 }
 
 button.prev {
@@ -421,6 +451,26 @@ button.prev {
 
 button.next {
     right: 450px;
+}
+
+.r-blurry-circle-1 {
+    fill: #CC2727;
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    left: -10%;
+    top: 150%;
+    filter: blur(35px);
+}
+
+.r-blurry-circle-2 {
+    fill: #CC2727;
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    right: -10%;
+    top: 110%;
+    filter: blur(35px);
 }
 
 @font-face {
