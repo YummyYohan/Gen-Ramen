@@ -473,6 +473,74 @@ button.next {
     filter: blur(35px);
 }
 
+/* Build your own ramen */
+.build-your-ramen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+    padding: 20px;
+    position: relative;
+}
+.build-your-ramen-bar {
+    z-index: 1;
+}
+
+.build-your-ramen-bar nav ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #253054;
+    padding: 10px 50px;
+    border-radius: 200px;
+    gap: 60px;
+    color: #CC2727;
+    font-family: "HiroMisake";
+    font-size: 16px;
+    overflow: visible;
+    position: relative;
+}
+
+.build-your-ramen-bar nav ul li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 20px;
+}
+.build-your-ramen-bar nav ul li span{
+    display:flex;
+    flex-direction: column;
+    color: #FFF7F1;
+}
+
+.build-your-ramen-bar nav ul li span#jap{
+    font-weight: bold;
+    color: #CC2727;
+}
+    
+
+.build-your-ramen-bar nav ul li.ramen{
+    position: absolute;
+    background-color: #FFF7F1;
+    border-radius: 50%;
+    padding: 20px;
+}
+
+.build-your-ramen .blue-bubble{
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    background-color: #253054;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
 @font-face {
     font-family: 'HiroMisake';
     src: url(/fonts/HIROMISAKE.ttf);
