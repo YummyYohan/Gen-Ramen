@@ -306,44 +306,71 @@
         </div>
     </div>
 
-    <div class="hours-location">
-        <h2>Hours & <span>Location</span></h2>
-        <div class="dashed-circle-container">
-            <svg viewBox="0 0 600 250" preserveAspectRatio="xMidYMid meet">
-                <circle class="dashed-circle" cx="300" cy="125" r="130" />
+    <div class="hours-location-container">
+        <div class="hours-location">
+            <h2>Hours & <span>Location</span></h2>
+            <div class="dashed-circle-container">
+                <svg viewBox="0 0 600 250" preserveAspectRatio="xMidYMid meet">
+                    <circle class="dashed-circle" cx="300" cy="125" r="130" />
+                </svg>
+            </div>
+            <div class="hours" id="hoursCard">
+                <div class="background">
+                    <p id="circle"> </p>
+                    <p id="rect"> </p>
+                </div>
+                <div class="hours-wrapper">
+                    <div class="front-circle">
+                        <img src="/images/ramen-soup.svg" width="100" height="100" />
+                        <p>Hours</p>
+                    </div>
+                    <div class="back-circle">
+                        <p>Mon-Sun: 11am - 9pm</p>
+                        <p>Tues: Closed</p>
+                    </div>
+                </div>
+            </div>
+            <div class="location" id="locationCard">
+                <div class="background">
+                    <p id="circle"> </p>
+                    <p id="rect"> </p>
+                </div>
+                <div class="location-wrapper">
+                    <div class="front-circle">
+                        <img src="/images/dim-sum.svg" width="100" height="100" />
+                        <p>Location</p>
+                    </div>
+                    <div class="back-circle">
+                        <p>123 Main Street</p>
+                        <p>Raleigh, NC</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gen-image">
+            <img src="/images/gen-collection.png" alt="Gen Ramen Foods" width="400" height="400" />
+            <svg width="400" height="400" viewBox="0 0 200 200">
+                <circle cx="100" cy="100" r="60" />
+                <defs>
+                    <path id="circlePath" d="
+                            M 100,100
+                            m -65,0
+                            a 65,65 0 1,1 130,0
+                            a 65,65 0 1,1 -130,0
+                        " />
+                </defs>
+                <text>
+                    <textPath href="#circlePath" startOffset="0%" textLength="401" lengthAdjust="spacing">
+                        Ramen • Ramen • Ramen • Ramen • Ramen • Ramen • Ramen • Ramen • 
+                    </textPath>
+                </text>
             </svg>
-        </div>
-        <div class="hours" id="hoursCard">
-            <div class="background">
-                <p id="circle"> </p>
-                <p id="rect"> </p>
+            <div class="dashed-circle-container">
+                <svg width="600" height="600" viewbox="0 0 600 600">
+                    <circle class="dashed-circle" cx="300" cy="300" r="260" />
+                </svg>
             </div>
-            <div class="hours-wrapper">
-                <div class="front-circle">
-                    <img src="/images/ramen-soup.svg" width="100" height="100" />
-                    <p>Hours</p>
-                </div>
-                <div class="back-circle">
-                    <p>Mon-Sun: 11am - 9pm</p>
-                    <p>Tues: Closed</p>
-                </div>
-            </div>
-        </div>
-        <div class="location" id="locationCard">
-            <div class="background">
-                <p id="circle"> </p>
-                <p id="rect"> </p>
-            </div>
-            <div class="location-wrapper">
-                <div class="front-circle">
-                    <img src="/images/dim-sum.svg" width="100" height="100" />
-                    <p>Location</p>
-                </div>
-                <div class="back-circle">
-                    <p>123 Main Street</p>
-                    <p>Raleigh, NC</p>
-                </div>
-            </div>
+
         </div>
     </div>
 
