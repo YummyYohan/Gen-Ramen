@@ -133,6 +133,16 @@ moveBubbles(activeLi);
 
 updateCarousel();
 
+// Flip Card
+const hoursCard = document.getElementById("hoursCard");
+hoursCard.addEventListener("click", () => {
+  hoursCard.classList.toggle("flipped");
+});
+
+const locationCard = document.getElementById("locationCard");
+locationCard.addEventListener("click", () => {
+    locationCard.classList.toggle("flipped");
+})
 
 function redirectToPage() {
     window.location.href = '/pages/menu.html'; // Replace with your target URL
