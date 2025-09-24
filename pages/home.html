@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gen Ramen</title>
     <link rel="stylesheet" href="/styles/home.css" />
     <!-- Gen Ramen Favicon -->
@@ -15,14 +16,29 @@
 </head>
 
 <body>
+ 
+    <!-- Mobile Fullscreen Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#" class="active">Home</a>
+        <a href="#">Menu</a>
+        <a href="#">Contact</a>
+        <a href="#">Location</a>
+    </div>
 
 
     <div class="main-nav">
         <nav>
             <ul>
+                <header class="mobile-nav">
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </header>
                 <li><a href="/pages/home.html">Home</a></li>
                 <li><a href="/pages/menu.html">Menu</a></li>
-                <li></li>
+                <li><a>hide</a></li>
 
                 <div class="logo-container">
                     <svg width="100" height="100" viewbox="0 0 100 100">
@@ -72,12 +88,12 @@
         </div>
 
         <div class="ramen-icon">
-            <svg width="438" height="480" viewbox="0 0 438 480">
-                <circle cx="330" cy="240" r="230" fill="#CC2727" />
-                <circle cx="350" cy="240" r="207" fill="#F25757" />
-                <circle cx="400" cy="240" r="177" fill="#F37070" />
+            <svg width="520" height="520" viewbox="0 0 520 520">
+                <circle cx="260" cy="260" r="260" fill="#CC2727" />
+                <circle cx="260" cy="260" r="217" fill="#F25757" />
+                <circle cx="260" cy="260" r="167" fill="#F37070" />
             </svg>
-            <img src="/images/Ramen blue.svg" alt="Ramen Icon" class="ramen-icon" width="412" height="437" />
+            <img src="/images/Ramen blue.svg" alt="Ramen Icon" class="ramen-icon" width="520" height="520" />
 
         </div>
     </div>
@@ -89,7 +105,7 @@
                     <div class="blue-bubble" id="blueBubble"></div>
                     <div class="white-bubble" id="whiteBubble"></div>
                     <li data-index="0" class="active">Ramen</li>
-                    <li data-index="1">Bao Bun</li>
+                    <li data-index="1">Bao</li>
                     <li data-index="2">Donburi</li>
                     <li data-index="3">Izakaya</li>
                 </ul>
@@ -274,29 +290,58 @@
         </div>
         <div class="build-your-ramen-text">
             <div class="spice">
-                <h2><img src="/images/fire-icon-red.svg" width="40" height="40" /></h2>
-                <p>Levels 1-4 or make it even hotter by choosing volcano </p>
+                <div class="white">
+                    <h2><img src="/images/fire-icon-red.svg" width="40" height="40" /></h2>
+                    <ul>
+                        <li>Levels 1-4</li>
+                        <li>Volcano</li>
+                    </ul>
+                </div>
             </div>
 
             <div class="topping">
-                <h2><img src="/images/naruto-icon-red.svg" width="60" height="60" /></h2>
-                <p>Soft Boiled Egg, Black Garlic Oil, Green Onion, Kimchi, Corn, Bokchoy, Beansprouts, Mushrooms,
-                    Cabbage, Bamboo Shoots, Minced Garlic, Dry Seaweed, Spicy Lime Chili, Tofu, Pork Belly Chasu, Spicy
-                    Ground Pork, Chicken, Marinated Beef, Shrimp</p>
+                <div class="white">
+                    <h2><img src="/images/naruto-icon-red.svg" width="60" height="60" /></h2>
+                    <ul>
+                        <li>Kimchi</li>
+                        <li>Spicy Lime Chili</li>
+                        <li>Tofu</li>
+                        <li>Chicken</li>
+                        <li>Marinated Beef</li>
+                        <li>Pork Belly Chasu</li>
+                        <li>Spicy Ground Pork</li>
+                        <li>Shrimp</li>
+                        <li>And More</li>
+                    </ul>
+                </div>
             </div>
 
             <img id="ramen" src="/images/bowl-of-ramen.PNG" alt="Bowl Of Ramen" width="450px" height="600px">
 
-            <div class="broth">
-                <h2><img src="/images/broth-icon-1-red.svg" width="60" height="60" /></h2>
-                <p>Tonkotsu, Chicken, Miso, Vegan, Shoyu, Curry</p>
-            </div>
-
-
             <div class="noodle">
-                <h2><img src="/images/noodle-icon-red.svg" width="40" height="40" /></h2>
-                <p>Ramen noodles or Rice noodles</p>
+                <div class="white">
+                    <h2><img src="/images/noodle-icon-red.svg" width="40" height="40" /></h2>
+                    <ul>
+                        <li>Ramen noodles</li>
+                        <li>Rice noodles</li>
+                    </ul>
+                </div>
             </div>
+
+            <div class="broth">
+                <div class="white">
+                    <h2><img src="/images/broth-icon-1-red.svg" width="60" height="60" /></h2>
+                    <ul>
+                        <li>Tonkotsu</li>
+                        <li>Chicken</li>
+                        <li>Miso</li>
+                        <li>Vegan</li>
+                        <li>Shoyu</li>
+                        <li>Curry</li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
         <div class="cherry-blossom">
             <img src="/images/cherry blossom 3.png" alt="Cherry Blossom" width="600" height="600" />
@@ -383,7 +428,8 @@
             <div class="follow">
                 <h1>Follow Us</h1>
                 <p>Stay updated on our latest news and promotions!</p>
-                <p><strong>Instagram:</strong> @genramen_raleigh</p>
+                <p><img src="/images/instagram-icon.svg" alt="Instagram Icon" height="40" width="40" />
+                    @genramen_raleigh</p>
             </div>
         </div>
 

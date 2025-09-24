@@ -12,6 +12,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 });
+//mobile nav
+const hamburger = document.getElementById("hamburger");
+const mobileMenu = document.getElementById("mobileMenu");
+
+// Toggle full-screen menu
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("open");
+    mobileMenu.classList.toggle("show");
+});
+
+// Dropdown toggle
+document.querySelectorAll(".dropdown-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+        btn.parentElement.classList.toggle("open");
+    });
+});
+
+
 // Menu Bubble
 const blueBubble = document.getElementById("blueBubble");
 const whiteBubble = document.getElementById("whiteBubble");

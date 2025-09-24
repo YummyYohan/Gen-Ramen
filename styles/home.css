@@ -19,11 +19,10 @@ body {
     list-style-type: none;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     background-color: #253054;
     padding: 20px;
     border-radius: 200px;
-    gap: 60px;
 
 }
 
@@ -31,6 +30,7 @@ body {
     text-decoration: none;
     color: #CC2727;
     padding: 30px;
+    margin: 0 30px;
 }
 
 .main-nav nav a.active {
@@ -77,7 +77,7 @@ body {
     align-items: flex-start;
     text-align: left;
     width: 100%;
-    margin: 0 20px;
+    margin-left: 70px;
     color: #253054;
     max-width: 33%;
     overflow-wrap: break-word;
@@ -86,7 +86,7 @@ body {
 
 .main-header h1 {
     font-family: HiroMisake;
-    font-size: 48px;
+    font-size: 44px;
     font-style: normal;
     font-weight: normal;
 
@@ -153,21 +153,23 @@ body {
 
 .ramen-icon {
     width: 100%;
-    max-width: 438px;
+    max-width: 520px;
     height: auto;
-    max-height: 490px;
+    max-height: 520px;
     position: absolute;
-    right: 0%;
-    top: -10%;
+    right: -5%;
+    top: -18%;
 
 
 }
 
 .ramen-icon img {
-    max-width: 412px;
-    max-height: 437px;
-    right: -6%;
-    top: 4%;
+    max-width: 520px;
+    max-height: 520px;
+    left: -50%;
+    top: 50%;
+    transform: translate(40%, -50%);
+    position: absolute;
 }
 
 .icon-header circle {
@@ -179,6 +181,134 @@ body {
     stroke-width: 7;
 
 }
+
+/* mobile header */
+/* Hamburger Button */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+    z-index: 1002;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: #CC2727;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Full-screen mobile menu */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #253054;
+    padding-top: 80px;
+    text-align: center;
+    gap: 35px;
+    z-index: 1000;
+
+    display: flex;
+    flex-direction: column;
+
+    /* Start hidden above screen */
+    transform: translateY(-100%);
+    transition: transform 0.50s ease-in-out;
+}
+
+.mobile-menu.show {
+    transform: translateY(0);
+}
+
+.mobile-menu a {
+    color: #FFF7F1;
+    font-family: "HiroMisake";
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.mobile-menu a.active {
+    color: #CC2727;
+}
+
+.mobile-menu a:hover {
+    color: #CC2727;
+}
+
+/* Dropdown inside menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 18px;
+    user-select: none;
+}
+
+.dropdown-content {
+    display: none;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.dropdown-content a {
+    font-size: 16px;
+    color: #aaa;
+}
+
+.dropdown.open .dropdown-content {
+    display: flex;
+    animation: fadeIn 0.3s ease-in;
+}
+
+/* Fade-in animation for submenu */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hamburger open -> X */
+.hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
 
 
 
@@ -199,7 +329,7 @@ text {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 200px;
+    margin-top: 180px;
     padding: 20px;
 }
 
@@ -209,9 +339,9 @@ text {
     align-items: center;
     justify-content: space-evenly;
     background-color: #253054;
-    padding: 20px 50px;
+    padding: 20px 70px;
     border-radius: 200px;
-    gap: 60px;
+    gap: 120px;
     color: #CC2727;
     font-family: "HiroMisake";
     font-size: 16px;
@@ -265,14 +395,14 @@ text {
 
 
 .menu-carousel-body {
-    margin: -90px 0;
     font-family: sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #FFF7F1;
-    height: 100vh;
+    height: min(100vh, 800px);
     justify-content: center;
+    position: relative;
+    margin: -8%;
 
 
 }
@@ -414,7 +544,7 @@ button.see-more-btn {
     color: #FFFFFF;
     background-color: #253054;
     border-radius: 20px;
-    margin: 0px auto;
+    margin: 2% auto;
     transition: all 0.3s ease;
 }
 
@@ -455,21 +585,23 @@ button.next {
 
 .r-blurry-circle-1 {
     fill: #CC2727;
-    width: 350px;
-    height: 350px;
+    width: 500px;
+    height: 500px;
     position: absolute;
-    left: -10%;
-    top: 150%;
+    left: 7%;
+    top: 24%;
+    transform: translate(-50%, -25%);
     filter: blur(35px);
 }
 
 .r-blurry-circle-2 {
     fill: #CC2727;
-    width: 350px;
-    height: 350px;
+    width: 450px;
+    height: 450px;
     position: absolute;
-    right: -10%;
-    top: 110%;
+    left: 93%;
+    top: 82%;
+    transform: translate(-50%, -50%);
     filter: blur(35px);
 }
 
@@ -479,7 +611,7 @@ button.next {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: -10%;
     position: relative;
 }
 
@@ -548,8 +680,11 @@ button.next {
     margin-top: 200px;
     font-family: "HiroMisake";
     position: relative;
+    z-index: 2;
+    ;
 
 }
+
 
 .build-your-ramen-text h1 {
     font-weight: normal;
@@ -564,73 +699,116 @@ button.next {
     color: #CC2727;
     font-size: 32px;
     margin-bottom: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
+}
+
+.build-your-ramen-text .spice h2 {
+    top: 1%;
+}
+
+.build-your-ramen-text .noodle h2 {
+    top: 1%;
+}
+
+.build-your-ramen-text .broth h2 {
+    top: -1%;
+}
+
+.build-your-ramen-text .topping h2 {
+    top: 1%;
 }
 
 .build-your-ramen-text span {
     color: #253054;
 }
 
-.build-your-ramen-text p {
-    font-family: "Montserrat", sans-serif;
+.build-your-ramen-text ul {
+    font-family: "HiroMisake";
     font-weight: normal;
     font-style: normal;
     color: #253054;
     font-size: 18px;
+    column-count: 2;
+    column-gap: 5px;
 }
 
 .build-your-ramen-text .spice {
-    margin-left: 31%;
-    margin-top: -12%;
-    width: 13%;
+    margin-left: -50%;
+    margin-top: -35%;
+    width: 80%;
+    background-color: #253054;
     align-self: start;
+    border-radius: 100px;
+    position: relative;
 
+}
+
+
+.build-your-ramen-text .white {
+    background-color: #FFF7F1;
+    margin: 25px;
+    border-radius: 100px;
+    padding: 20px;
 }
 
 .build-your-ramen-text .noodle {
-    margin-left: 47%;
-    margin-top: 0%;
-    width: 14%;
-
+    margin-left: 70%;
+    margin-top: -107%;
+    width: 80%;
+    align-self: start;
+    background-color: #253054;
+    border-radius: 100px;
+    position: relative;
 }
 
 .build-your-ramen-text .broth {
-    margin-left: 27%;
-    margin-top: -34%;
-    width: 14%;
+    margin-left: 78%;
+    margin-top: 27%;
+    width: 80%;
+    align-self: start;
+    background-color: #253054;
+    border-radius: 100px;
+    position: relative;
 }
 
 .build-your-ramen-text .topping {
-    margin-left: 21%;
-    margin-top: 0%;
-    width: 20%;
+    margin-left: -78%;
+    margin-top: 25%;
+    width: 100%;
     align-self: start;
+    background-color: #253054;
+    border-radius: 100px;
+    position: relative;
 }
 
 .build-your-ramen-text img#ramen {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: -85%;
+    top: -65%;
 }
 
 .build-your-ramen .cherry-blossom img {
     position: absolute;
     left: 84%;
     transform: translateX(-50%);
-    top: 35%;
+    top: 65%;
 }
 
 .build-your-ramen .cherry-blossom-flipped img {
     position: absolute;
     left: 13%;
     transform: translateX(-50%);
-    top: 102%;
+    top: 30%;
 }
 
 /* Hours and Location */
 .hours-location-container {
-    margin-top: 40%;
+    margin-top: 10%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -660,7 +838,7 @@ button.next {
     width: min(90vw, 600px);
     height: auto;
     z-index: 1;
-    fill:#253054;
+    fill: #253054;
 }
 
 .gen-image .dashed-circle-container {
@@ -673,7 +851,7 @@ button.next {
     z-index: 3;
 }
 
-.gen-image .dashed-circle-container svg{
+.gen-image .dashed-circle-container svg {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -682,7 +860,7 @@ button.next {
 }
 
 .gen-image .dashed-circle {
-    position:absolute;
+    position: absolute;
     top: 50%;
     left: 50%;
     stroke: #CC2727;
@@ -692,11 +870,11 @@ button.next {
     vector-effect: non-scaling-stroke;
 }
 
-.gen-image text{
+.gen-image text {
     fill: #CC2727;
     font-family: HiroMisake;
     font-size: 9px;
-    text-anchor:start;
+    text-anchor: start;
 }
 
 .hours-location {
@@ -981,17 +1159,15 @@ button.next {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content:space-around;
+    justify-content: space-around;
     margin-top: 100px;
     padding: 0px 50px;
     text-align: center;
     background-color: #253054;
 }
 
-.contact .contact-text{
+.contact .contact-text {
     font-family: "Montserrat", sans-serif;
-    font-weight: normal;
-    font-style: normal;
     color: #FFF7F1;
     font-size: 18px;
     display: flex;
@@ -1000,9 +1176,28 @@ button.next {
     justify-content: center;
 }
 
-.contact .contact-text h1{
-    margin-top: 10%;;
+.contact .contact-text h1 {
+    font-family: "HiroMisake";
+    font-weight: normal;
+    font-style: normal;
+    margin-top: 10%;
     color: #CC2727;
+}
+
+.contact .contact-text p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.contact iframe {
+    border: none;
+    border-radius: 10px;
+    width: min(90vw, 600px);
+    height: min(60vh, 450px);
+    margin: 40px 0;
 }
 
 /* footer */
@@ -1027,27 +1222,129 @@ footer p {
 
 
 /* Responsive fix for small screens */
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
+
+    /* Stack the top section vertically */
     .topPage {
-        display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-        justify-content: center;
+        gap: 40px;
+        margin: 30px 12%;
+        padding: 10px;
     }
 
-    .main-header,
-    .icon-header,
-    .ramen-icon {
-        max-width: 100%;
-        position: static;
-        transform: none;
-    }
-
-    .main-header h1,
-    .main-header h2 {
+    /* Main header: full width and centered */
+    .main-header {
+        margin-left: 0;
+        max-width: 90%;
         text-align: center;
     }
 
+    .main-header h1 {
+        font-size: 32px;
+    }
+
+    .main-header h2 {
+        font-size: 18px;
+    }
+
+    /* Icon header: center it and reset absolute positioning */
+    .icon-header {
+        position: relative;
+        left: auto;
+        transform: none;
+        margin: 20px auto;
+    }
+
+    .icon-header .jap1,
+    .icon-header .jap2 {
+        position: absolute;
+        font-size: 128px;
+        display: inline-block;
+        margin: 10px;
+    }
+
+    .icon-header .jap1 {
+        left: 27%;
+        top: 12%;
+        transform: translate(-50%, -50%);
+    }
+
+    .icon-header .jap2 {
+        left: 56%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .icon-header h2 {
+        font-size: 20px;
+        padding: 0;
+    }
+
+    .icon-header h3 {
+        font-size: 16px;
+    }
+
+    /* Ramen icon image scaling */
+    .ramen-icon {
+        position: relative;
+        max-height: none;
+        right: auto;
+        top: auto;
+        margin: 0 auto;
+    }
+
+    .ramen-icon img {
+        position: absolute;
+        max-width: 420px;
+        max-height: 420px;
+        left: 40%;
+        top: 45%;
+        transform: translate(-50%, -50%)
+    }
+
+    .ramen-icon svg {
+        max-width: 420px;
+        max-height: 420px;
+    }
+
+    /* Navigation adjustments */
+
+    .main-nav {
+        display: block;
+        margin: 0 10%;
+    }
+
+    .main-nav nav ul {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0px 120px;
+        height: 57px;
+        border-radius: 200px;
+        position: relative;
+    }
+
+    .main-nav nav a {
+        display: none;
+
+    }
+
+    .mobile-nav nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    /* menu mobile */
+    .menu-category {
+        margin-top: 0px;
+    }
+
+    .menu-category nav ul {
+        
+    }
 
 }
