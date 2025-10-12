@@ -1144,7 +1144,7 @@ button.next {
 
 .hours-location .hours .hours-wrapper {
     position: absolute;
-    width: min(60vw, 45vw);
+    width: min(60vw, 43vw);
     aspect-ratio: 1/1;
     perspective: 1000px;
     transform-style: preserve-3d;
@@ -1265,7 +1265,7 @@ button.next {
 
 .hours-location .location .location-wrapper {
     position: absolute;
-    width: min(60vw, 45vw);
+    width: min(60vw, 43vw);
     aspect-ratio: 1/1;
     perspective: 1000px;
     transform-style: preserve-3d;
