@@ -1144,7 +1144,7 @@ button.next {
 
 .hours-location .hours .hours-wrapper {
     position: absolute;
-    width: min(60vw, 43vw);
+    width: min(60vw, 15vw);
     aspect-ratio: 1/1;
     perspective: 1000px;
     transform-style: preserve-3d;
@@ -1265,7 +1265,7 @@ button.next {
 
 .hours-location .location .location-wrapper {
     position: absolute;
-    width: min(60vw, 43vw);
+    width: min(60vw, 15vw);
     aspect-ratio: 1/1;
     perspective: 1000px;
     transform-style: preserve-3d;
@@ -1861,6 +1861,14 @@ footer p {
 
     .tap-hint {
         margin-bottom: -10%;
+    }
+
+    .hours-location .location .location-wrapper {
+        width: min(60vw, 43vw);
+    }
+
+    .hours-location .hours .hours-wrapper {
+        width: min(60vw, 43vw);
     }
 
 
