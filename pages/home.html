@@ -16,28 +16,27 @@
 </head>
 
 <body>
- 
+    <!-- Hamburger menu, hidden at first -->
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
     <!-- Mobile Fullscreen Menu -->
     <div class="mobile-menu" id="mobileMenu">
         <a href="#" class="active">Home</a>
-        <a href="#">Menu</a>
-        <a href="#">Contact</a>
-        <a href="#">Location</a>
+        <a href="#menuPreview">Menu</a>
+        <a href="#contact">Contact</a>
+        <a href="#location">Location/Hours</a>
     </div>
 
 
     <div class="main-nav">
         <nav>
             <ul>
-                <header class="mobile-nav">
-                    <div class="hamburger" id="hamburger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </header>
                 <li><a href="/pages/home.html">Home</a></li>
-                <li><a href="/pages/menu.html">Menu</a></li>
+                <li><a href="#menuPreview">Menu</a></li>
                 <li><a>hide</a></li>
 
                 <div class="logo-container">
@@ -54,13 +53,23 @@
                     <img src="/images/logo.svg" alt="Gen Ramen Logo" class="logo" />
                 </div>
 
-                <li><a href="/pages/contact.html">Contact</a></li>
-                <li><a href="/pages/map.html">Map</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#location">Location</a></li>
             </ul>
         </nav>
     </div>
 
     <div class="topPage">
+        <div class="ramen-icon-mobile">
+            <svg viewbox="0 0 520 520">
+                <circle cx="260" cy="260" r="260" fill="#CC2727" />
+                <circle cx="260" cy="260" r="217" fill="#F25757" />
+                <circle cx="260" cy="260" r="167" fill="#F37070" />
+            </svg>
+            <img src="/images/Ramen blue.svg" alt="Ramen Icon" class="ramen-icon" width="520" height="520" />
+
+        </div>
+
         <div class="main-header">
             <h1>Home For <span class="highlight">Authentic Japanese</span> Comfort</h1>
             <h2>Warm your soul with rich, handcrafted broths, fresh noodles, and bold flavors. Gen Ramen blends
@@ -68,17 +77,19 @@
         </div>
 
         <div class="icon-header">
-            <svg width="200" height="200" viewbox="0 0 200 200">
-                <circle cx="100" cy="100" r="100" />
-            </svg>
-            <!-- translates to ramen -->
-            <h1 lang="ja" class="jap1">拉</h1>
-            <h1 lang="ja" class="jap2">麺</h1>
+            <div class="circle-wrapper">
+                <svg viewbox="0 0 200 200" preserveAspectRatio="xMidYMid meet">
+                    <circle cx="100" cy="100" r="100" />
+                </svg>
+                <!-- translates to ramen -->
+                <h1 lang="ja" class="jap1">拉</h1>
+                <h1 lang="ja" class="jap2">麺</h1>
+            </div>
             <h2>
                 <svg width="70" height="10" viewbox="0 0 70 10">
                     <line x1="0" y1="1" x2="70" y2="1" />
                 </svg>
-                Japanese Food Restaurant
+                Japanese Restaurant
                 <svg width="70" height="10" viewbox="0 0 70 10">
                     <line x1="0" y1="1" x2="70" y2="1" />
                 </svg>
@@ -88,7 +99,7 @@
         </div>
 
         <div class="ramen-icon">
-            <svg width="520" height="520" viewbox="0 0 520 520">
+            <svg viewbox="0 0 520 520">
                 <circle cx="260" cy="260" r="260" fill="#CC2727" />
                 <circle cx="260" cy="260" r="217" fill="#F25757" />
                 <circle cx="260" cy="260" r="167" fill="#F37070" />
@@ -98,7 +109,7 @@
         </div>
     </div>
 
-    <div class="menu-preview">
+    <div class="menu-preview" id="menuPreview">
         <div class="menu-category">
             <nav>
                 <ul>
@@ -120,6 +131,18 @@
             </div>
 
             <div class="r-blurry-circle-2">
+                <svg viewBox="0 0 350 350">
+                    <circle cx="175" cy="175" r="175px" />
+                </svg>
+            </div>
+
+            <div class="r-blurry-circle-3">
+                <svg viewBox="0 0 350 350">
+                    <circle cx="175" cy="175" r="175px" />
+                </svg>
+            </div>
+
+            <div class="r-blurry-circle-4">
                 <svg viewBox="0 0 350 350">
                     <circle cx="175" cy="175" r="175px" />
                 </svg>
@@ -183,21 +206,21 @@
                     </div>
 
                     <!-- Bao Buns -->
-                    <div class="menu-item" data-category="baobun">
+                    <div class="menu-item" data-category="bao">
                         <img src="/images/Pork Bao.png" alt="Bao Bun" class="pork-bao" width="700" height="1250" />
                         <h1>Pork <br /> Bao Bun</h1>
                         <svg viewBox="0 0 360 45">
                             <rect width="360" height="45" />
                         </svg>
                     </div>
-                    <div class="menu-item" data-category="baobun">
+                    <div class="menu-item" data-category="bao">
                         <img src="/images/Crab Bao.png" alt="Bao Bun" class="crab-bao" width="350" height="700" />
                         <h1>Crab <br /> Bao Bun</h1>
                         <svg viewBox="0 0 360 45">
                             <rect width="360" height="45" />
                         </svg>
                     </div>
-                    <div class="menu-item" data-category="baobun">
+                    <div class="menu-item" data-category="bao">
                         <img src="/images/temp-img.webp" alt="Beef Bao" class="temp" width="300" height="240" />
                         <h1>Beef <br /> Bao Bun</h1>
                         <svg viewBox="0 0 360 45">
@@ -205,7 +228,7 @@
                         </svg>
                     </div>
 
-                    <div class="menu-item" data-category="baobun">
+                    <div class="menu-item" data-category="bao">
                         <img src="/images/temp-img.webp" alt="Unagi Bao" class="temp" width="300" height="240" />
                         <h1>Unagi <br /> Bao Bun</h1>
                         <svg viewBox="0 0 360 45">
@@ -213,7 +236,7 @@
                         </svg>
                     </div>
 
-                    <div class="menu-item" data-category="baobun">
+                    <div class="menu-item" data-category="bao">
                         <img src="/images/temp-img.webp" alt="Veggie Bao" class="temp" width="300" height="240" />
                         <h1>Veggie <br /> Bao Bun</h1>
                         <svg viewBox="0 0 360 45">
@@ -232,7 +255,7 @@
 
                     <!-- Izakaya -->
                     <div class="menu-item" data-category="izakaya">
-                        <img src="/images/temp-img.webp" alt="Izakaya" width="300" height="240" />
+                        <img src="/images/temp-img.webp" alt="Izakaya" class="temp" width="300" height="240" />
                         <h1>Chicken Izakaya</h1>
                         <svg viewBox="0 0 360 45">
                             <rect width="360" height="45" />
@@ -250,7 +273,7 @@
     </div>
 
     <div class="build-your-ramen">
-        <div class="build-your-ramen-text">
+        <div class="build-your-ramen-header">
             <h1>Build Your <span>Own</span> Ramen</h1>
         </div>
 
@@ -288,21 +311,62 @@
                 </ul>
             </nav>
         </div>
-        <div class="build-your-ramen-text">
-            <div class="spice">
-                <div class="white">
-                    <h2><img src="/images/fire-icon-red.svg" width="40" height="40" /></h2>
-                    <ul>
-                        <li>Levels 1-4</li>
-                        <li>Volcano</li>
+        <div class="cherry-blossom">
+            <img src="/images/cherry blossom 3.png" alt="Cherry Blossom" width="600" height="600" />
+        </div>
+        <div class="cherry-blossom-flipped">
+            <img src="/images/cherry blossom 2 flipped.png" alt="Cherry Blossom" width="500" height="500" />
+        </div>
+
+        <div class="build-your-ramen-bar-mobile">
+            <div class="blue-bubble" id="blueBubble">
+                <div class="ramen"><img src="/images/ramen-icon.svg" width="65" height="65" /></div>
+            </div>
+        </div>
+        <div class="build-your-ramen-text-mobile">
+            <div class="scroll">
+
+                <div class="scroll-header"><img src="/images/fire-icon-red.svg" width="40" height="40" /> Spice Level
+                </div>
+                <div class="rod-circle top-left"></div>
+                <div class="rod-circle top-right"></div>
+                <div class="scroll-content">
+                    <ul class="ingredient-list">
+                        <li>1 (🌶️)</li>
+                        <li>2 (🌶️🌶️)</li>
+                        <li>3 (🌶️🌶️🌶️)</li>
+                        <li>4 (🔥🌶️🌶️🌶️)</li>
+                        <li>Volcanic (🌋)</li>
                     </ul>
                 </div>
+                <div class="rod-circle bottom-left"></div>
+                <div class="rod-circle bottom-right"></div>
+                <div class="scroll-footer"></div>
             </div>
 
-            <div class="topping">
-                <div class="white">
-                    <h2><img src="/images/naruto-icon-red.svg" width="60" height="60" /></h2>
-                    <ul>
+            <div class="scroll">
+                <div class="scroll-header"><img src="/images/noodle-icon-red.svg" width="40" height="40" /> Noodle Types
+                </div>
+                <div class="rod-circle top-left"></div>
+                <div class="rod-circle top-right"></div>
+                <div class="scroll-content">
+                    <ul class="ingredient-list">
+                        <li>Ramen noodles</li>
+                        <li>Rice noodles</li>
+                    </ul>
+                </div>
+                <div class="rod-circle bottom-left"></div>
+                <div class="rod-circle bottom-right"></div>
+                <div class="scroll-footer"></div>
+            </div>
+
+            <div class="scroll">
+                <div class="scroll-header"><img src="/images/naruto-icon-red.svg" width="40" height="40" /> Toppings
+                </div>
+                <div class="rod-circle top-left"></div>
+                <div class="rod-circle top-right"></div>
+                <div class="scroll-content">
+                    <ul class="ingredient-list">
                         <li>Kimchi</li>
                         <li>Spicy Lime Chili</li>
                         <li>Tofu</li>
@@ -314,24 +378,17 @@
                         <li>And More</li>
                     </ul>
                 </div>
+                <div class="rod-circle bottom-left"></div>
+                <div class="rod-circle bottom-right"></div>
+                <div class="scroll-footer"></div>
             </div>
 
-            <img id="ramen" src="/images/bowl-of-ramen.PNG" alt="Bowl Of Ramen" width="450px" height="600px">
-
-            <div class="noodle">
-                <div class="white">
-                    <h2><img src="/images/noodle-icon-red.svg" width="40" height="40" /></h2>
-                    <ul>
-                        <li>Ramen noodles</li>
-                        <li>Rice noodles</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="broth">
-                <div class="white">
-                    <h2><img src="/images/broth-icon-1-red.svg" width="60" height="60" /></h2>
-                    <ul>
+            <div class="scroll">
+                <div class="scroll-header"><img src="/images/broth-icon-1-red.svg" width="40" height="40" /> Broth</div>
+                <div class="rod-circle top-left"></div>
+                <div class="rod-circle top-right"></div>
+                <div class="scroll-content">
+                    <ul class="ingredient-list">
                         <li>Tonkotsu</li>
                         <li>Chicken</li>
                         <li>Miso</li>
@@ -340,24 +397,28 @@
                         <li>Curry</li>
                     </ul>
                 </div>
+                <div class="rod-circle bottom-left"></div>
+                <div class="rod-circle bottom-right"></div>
+                <div class="scroll-footer"></div>
             </div>
+        </div>
+                    <img id="ramen" src="/images/bowl-of-ramen.PNG" alt="Bowl Of Ramen" width="450px" height="600px">
 
-        </div>
-        <div class="cherry-blossom">
-            <img src="/images/cherry blossom 3.png" alt="Cherry Blossom" width="600" height="600" />
-        </div>
-        <div class="cherry-blossom-flipped">
-            <img src="/images/cherry blossom 2 flipped.png" alt="Cherry Blossom" width="500" height="500" />
-        </div>
+
     </div>
 
-    <div class="hours-location-container">
+    <div class="hours-location-container" id="location">
+
         <div class="hours-location">
-            <h2>Hours & <span>Location</span></h2>
+            <h2>Hours & <span>Location</span>
+                <div class="tap-hint">↻ Tap to flip</div>
+            </h2>
+
             <div class="dashed-circle-container">
                 <svg viewBox="0 0 600 250" preserveAspectRatio="xMidYMid meet">
                     <circle class="dashed-circle" cx="300" cy="125" r="130" />
                 </svg>
+
             </div>
             <div class="hours" id="hoursCard">
                 <div class="background">
@@ -366,6 +427,7 @@
                 </div>
                 <div class="hours-wrapper">
                     <div class="front-circle">
+
                         <img src="/images/ramen-soup.svg" width="100" height="100" />
                         <p>Hours</p>
                     </div>
@@ -375,6 +437,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="location" id="locationCard">
                 <div class="background">
                     <p id="circle"> </p>
@@ -419,7 +482,7 @@
         </div>
     </div>
 
-    <div class="contact">
+    <div class="contact" id="contact">
         <div class="contact-text">
             <div class="call">
                 <h1>Call Us</h1>

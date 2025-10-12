@@ -15,11 +15,27 @@ document.addEventListener("DOMContentLoaded", function () {
 //mobile nav
 const hamburger = document.getElementById("hamburger");
 const mobileMenu = document.getElementById("mobileMenu");
+const hamburgerFull = document.getElementById("hamburgerFull");
+const links = document.querySelectorAll(".mobile-menu a");
+const body = document.querySelectorAll("body");
+const html = document.querySelectorAll("html");
+
 
 // Toggle full-screen menu
 hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("open");
     mobileMenu.classList.toggle("show");
+    body.forEach(b => b.classList.toggle("no-scroll"));
+    html.forEach(h => h.classList.toggle("no-scroll"));
+});
+
+links.forEach(link => {
+    link.addEventListener("click", () => {
+        hamburger.classList.remove("open");
+        mobileMenu.classList.remove("show");
+        body.forEach(b => b.classList.remove("no-scroll"));
+        html.forEach(h => h.classList.remove("no-scroll"));
+    });
 });
 
 // Dropdown toggle
@@ -154,7 +170,7 @@ updateCarousel();
 // Flip Card
 const hoursCard = document.getElementById("hoursCard");
 hoursCard.addEventListener("click", () => {
-  hoursCard.classList.toggle("flipped");
+    hoursCard.classList.toggle("flipped");
 });
 
 const locationCard = document.getElementById("locationCard");
@@ -163,5 +179,41 @@ locationCard.addEventListener("click", () => {
 })
 
 function redirectToPage() {
-    window.location.href = '/pages/menu.html'; // Replace with your target URL
+    window.location.href = ''; // Replace with your target URL
 }
+
+//scrolls
+
+const scrolls = document.querySelectorAll('.scroll');
+scrolls.forEach(scroll => {
+    scroll.addEventListener('click', () => {
+        scroll.classList.toggle('open');
+    });
+});
+
+let lastScrollY = window.scrollY;
+const nav = document.querySelector(".main-nav");
+const navHamburger = document.querySelector(".hamburger");
+
+function handleScroll() {
+    // Only apply on mobile
+    if (window.innerWidth <= 1000) {
+        if (window.scrollY > lastScrollY && window.scrollY > 50) {
+            // scrolling down
+            navHamburger.classList.add("hide");
+            nav.classList.add("hide");
+        } else {
+            // scrolling up
+            navHamburger.classList.remove("hide");
+            nav.classList.remove("hide");
+        }
+        lastScrollY = window.scrollY;
+    } else {
+        // Ensure nav is always visible on desktop
+        navHamburger.classList.remove("hide");
+        nav.classList.remove("hide");
+    }
+}
+
+window.addEventListener("scroll", handleScroll);
+window.addEventListener("resize", handleScroll); // update on window resize
