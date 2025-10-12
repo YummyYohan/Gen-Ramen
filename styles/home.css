@@ -1475,7 +1475,7 @@ footer p {
 
 @font-face {
     font-family: 'HiroMisake';
-    src: url(/fonts/HIROMISAKE.ttf);
+    src: url(../fonts/HIROMISAKE.ttf);
     font-weight: normal;
     font-style: normal;
 }
