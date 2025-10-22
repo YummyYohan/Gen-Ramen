@@ -179,7 +179,7 @@ locationCard.addEventListener("click", () => {
 })
 
 function redirectToPage() {
-    window.location.href = ''; // Replace with your target URL
+    window.location.href = './gen-ramen-menu.pdf'; // Replace with your target URL
 }
 
 //scrolls
@@ -197,7 +197,7 @@ const navHamburger = document.querySelector(".hamburger");
 
 function handleScroll() {
     // Only apply on mobile
-    if (window.innerWidth <= 1000) {
+    if (window.innerWidth <= 1024) {
         if (window.scrollY > lastScrollY && window.scrollY > 50) {
             // scrolling down
             navHamburger.classList.add("hide");
